@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">happy_birthday</string>
+    <string name="happy_birthday_text">Happy Birthday Victoria!</string>
+    <string name="signature_text">From Ville</string>
+</resources>
