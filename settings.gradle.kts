@@ -26,3 +26,4 @@ rootProject.name = "Android-Basics-Kotlin-Compose-2026"
 include(":app")
 include(":app:greeting_card")
 include(":app:happy_birthday")
+include(":app:compose_article")
