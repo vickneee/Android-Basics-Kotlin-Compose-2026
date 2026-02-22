@@ -13,6 +13,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.android_basics_kotlin_compose_2026.ui.theme.AndroidBasicsKotlinCompose2026Theme
 
+/*
+    Log.e(String, String) // Error
+    Log.w(String, String) // Warning
+    Log.i(String, String) // Information
+    Log.d(String, String) // Debug
+    Log.v(String, String) // Verbose
+
+    private static final String TAG = "MainActivity";
+    ...
+    Log.i(TAG, "Greetings from Main Activity");
+ */
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
