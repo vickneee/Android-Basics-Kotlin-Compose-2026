@@ -66,7 +66,7 @@ fun TaskCompletedScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun TaskPreview() {
     AndroidBasicsKotlinCompose2026Theme {
         TaskCompletedScreen()
     }
