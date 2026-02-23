@@ -63,6 +63,7 @@ fun ModifyText(modifier: Modifier = Modifier) {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
+    Log.i("JV", "Greeting arvo on $name")
     Text(
         text = "Hello $name!",
         modifier = modifier
