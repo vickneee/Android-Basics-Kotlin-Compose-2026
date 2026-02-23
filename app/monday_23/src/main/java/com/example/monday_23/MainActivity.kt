@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ModifyText(modifier: Modifier = Modifier) {
-    var text by remember { mutableStateOf("") }
+    var text by remember { mutableStateOf("") } // Kuin static Javassa
     // var text = "Huh Hei"
     Column(
         modifier = modifier
