@@ -47,10 +47,10 @@
       </SelectionState>
       <SelectionState runConfigName="app.business_card">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-02-22T23:13:11.233228Z">
+        <DropdownSelection timestamp="2026-02-23T07:51:46.409880Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="PhysicalDevice" identifier="serial=8adceb37" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=/Users/victoriavavulina/.android/avd/Pixel_7_API_35.avd" />
             </handle>
           </Target>
         </DropdownSelection>
