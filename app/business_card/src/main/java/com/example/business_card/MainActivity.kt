@@ -8,7 +8,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -54,12 +53,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun BusinessCardApp() {
-    Row {
+    Column(
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        FirstSection()
         Column(
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
+            verticalArrangement = Arrangement.Bottom
         ) {
-            FirstSection()
             SecondSection()
         }
     }
@@ -85,18 +86,20 @@ fun FirstSection() {
 
 @Composable
 fun SecondSection() {
-    Text(
-        text = "+(358) 124 124 2345",
-        fontSize = 16.sp
-    )
-    Text(
-        text = "@AndroidDev",
-        fontSize = 16.sp
-    )
-    Text(
-        text = "vic.vav@android.dev",
-        fontSize = 16.sp
-    )
+    Column(modifier = Modifier.padding(top = 20.dp)) {
+        Text(
+            text = "+(358) 124 124 2345",
+            fontSize = 16.sp
+        )
+        Text(
+            text = "@AndroidDev",
+            fontSize = 16.sp
+        )
+        Text(
+            text = "vic.vav@android.dev",
+            fontSize = 16.sp
+        )
+    }
 }
 
 @Preview(showBackground = true)
