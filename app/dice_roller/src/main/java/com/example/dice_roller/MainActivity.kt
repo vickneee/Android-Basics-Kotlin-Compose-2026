@@ -6,9 +6,12 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.dice_roller.ui.theme.AndroidBasicsKotlinCompose2026Theme
@@ -20,28 +23,31 @@ class MainActivity : ComponentActivity() {
         setContent {
             AndroidBasicsKotlinCompose2026Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Surface(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(innerPadding)
+                    ) {
+                        DiceRollerApp()
+                    }
                 }
             }
         }
     }
 }
 
+@Preview(showBackground = true)
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
+fun DiceRollerApp(modifier: Modifier = Modifier) {
+    DiceWithButtonAndImage(
+        modifier = Modifier
+            .fillMaxSize()
+            .wrapContentSize(Alignment.Center)
     )
 }
 
-@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    AndroidBasicsKotlinCompose2026Theme {
-        Greeting("Android")
-    }
+fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
+    Text("Dice")
 }
+
