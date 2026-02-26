@@ -8,7 +8,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -17,7 +16,6 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -40,11 +38,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AndroidBasicsKotlinCompose2026Theme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                ) {
-                    TipCalculator()
-                }
+                TipCalculator()
             }
         }
     }
@@ -52,8 +46,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TipCalculator() {
-
-    var amountInput by remember { mutableStateOf( "") }
+    var amountInput by remember { mutableStateOf("") }
 
     val amount = amountInput.toDoubleOrNull() ?: 0.0
     val tip = calculateTip(amount)
@@ -81,7 +74,8 @@ fun TipCalculator() {
                 .padding(bottom = 32.dp)
                 .fillMaxWidth()
         )
-        Text(text = stringResource(R.string.tip_amount, tip),
+        Text(
+            text = stringResource(R.string.tip_amount, tip),
             fontSize = 28.sp
         )
         Spacer(modifier = Modifier.height(150.dp))
@@ -105,7 +99,7 @@ fun EditNumberField(
     )
 }
 
-private fun calculateTip(amount: Double, tipPercent:Double = 15.0 ): String {
+private fun calculateTip(amount: Double, tipPercent: Double = 15.0): String {
     val tip = tipPercent / 100 * amount
     return NumberFormat.getCurrencyInstance().format(tip)
 }
