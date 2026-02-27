@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app/architecture_27" />
             <option value="$PROJECT_DIR$/app/business_card" />
             <option value="$PROJECT_DIR$/app/compose_article" />
             <option value="$PROJECT_DIR$/app/compose_quadrant" />
