@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.architecture_27"
+    namespace = "com.example.lotto_27"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.architecture_27"
+        applicationId = "com.example.lotto_27"
         minSdk = 35
         targetSdk = 36
         versionCode = 1
@@ -48,9 +48,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
