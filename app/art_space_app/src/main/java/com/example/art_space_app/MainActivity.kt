@@ -20,6 +20,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -55,6 +59,40 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ArtSpaceApp(modifier: Modifier = Modifier) {
+    var currentIndex by remember { mutableIntStateOf(0) }
+
+    val artworks = listOf(
+        R.drawable.pexels_oandremoura_9083011,
+        R.drawable.pexels_anniroenkae_2983141,
+        R.drawable.pexels_mccutcheon_1149019,
+        R.drawable.pexels_anniroenkae_3109830
+    )
+
+    // Blue Red and White Light on Dark Background Andre Moura 2021
+    // Close-Up Photo Of Abstract Paint Anni Roenkae 2019
+    // Multicolored Abstract Artwork Alexander Grey 2018
+    // Multicolored Illustration Anni Roenkae 2019
+
+    val titles = listOf(
+        "Blue Red and White Light on Dark Background",
+        "Close-Up Photo Of Abstract Paint",
+        "Multicolored Abstract Artwork",
+        "Multicolored Illustration"
+    )
+
+    val artists = listOf(
+        "Andre Moura",
+        "Anni Roenkae",
+        "Alexander Grey",
+        "Anni Roenkae"
+    )
+
+    val years = listOf(
+        "2021",
+        "2019",
+        "2018",
+        "2019"
+    )
 
     Box(
     ) {
@@ -79,12 +117,8 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
                             .width(350.dp)
                     )
                     {
-                        // Blue Bird Perched on Wire Against Clear Sky Jagaba Denis
-                        // Close-up of Leaf with Water Droplets in Black and White Jonathan Borba
-                        // Multicolored Abstract Artwork Alexander Grey 2018
-                        // Close-Up Photo Of Abstract Paint Anni Roenkae 2019
                         Image(
-                            painter = painterResource(R.drawable.pexels_oandremoura_9083011),
+                            painter = painterResource(id = artworks[currentIndex]),
                             contentDescription = null,
                             modifier = modifier
                                 .padding(28.dp)
@@ -110,35 +144,54 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
                 )
                 {
                     Text(
-                        text = "Blue Red and White Light on Dark Background",
+                        text = titles[currentIndex],
                         modifier = modifier,
                         fontSize = 23.sp,
-                        fontWeight = FontWeight.Light
+                        fontWeight = FontWeight.Light,
+                        color = Color.Black
                     )
                     Text(
                         buildAnnotatedString {
                             withStyle(SpanStyle(fontWeight = FontWeight.Bold)) {
-                                append("Andre Moura")
+                                append(artists[currentIndex])
                             }
-                            append("(2021)")
-                        }
+                            append(" (${years[currentIndex]})")
+                        },
+                        modifier = modifier,
+                        fontSize = 18.sp,
+                        color = Color.Black
                     )
                 }
             }
 
             // Buttons
             Row(
-                modifier = modifier.padding(top = 18.dp)
+                modifier = modifier
+                    .padding(top = 18.dp)
                     .width(350.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
+
                 Button(
-                    onClick = { /*TODO*/ }, modifier = Modifier.padding(8.dp)
+                    onClick = {
+                        if (currentIndex > 0) {
+                            currentIndex--
+                        } else {
+                            currentIndex = artworks.size - 1
+    }
+                    }, modifier = Modifier.padding(8.dp)
                 ) {
                     Text(text = "Previous", modifier = Modifier.padding(28.dp, 0.dp))
                 }
+
                 Button(
-                    onClick = { /*TODO*/ }, modifier = Modifier.padding(8.dp)
+                    onClick = {
+                        if (currentIndex < artworks.size - 1) {
+                            currentIndex++
+                        } else {
+                            currentIndex = 0
+                        }
+                    }, modifier = Modifier.padding(8.dp)
                 ) {
                     Text(text = "Next",
                         modifier = Modifier.padding(28.dp, 0.dp))

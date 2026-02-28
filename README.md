@@ -9,6 +9,10 @@
 ## Art Space App
 
 <p align="center">
-<img src="./res/Screenshot_20260228_151322.png" width="35%" alt="Android Mobile App Screen - Artwork Screen"/>
+<img src="./res/Screenshot_20260301_011636.png" width="35%" alt="Android Mobile App Screen - Artwork Screen"/> <img src="./res/Screenshot_20260301_011645.png" width="35%" alt="Android Mobile App Screen - Artwork Screen"/>
+</p>
+
+<p align="center">
+<img src="./res/Screenshot_20260301_011649.png" width="35%" alt="Android Mobile App Screen - Artwork Screen"/> <img src="./res/Screenshot_20260301_011804.png" width="35%" alt="Android Mobile App Screen - Artwork Screen"/>
 </p>
 
