@@ -81,6 +81,8 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
                     {
                         // Blue Bird Perched on Wire Against Clear Sky Jagaba Denis
                         // Close-up of Leaf with Water Droplets in Black and White Jonathan Borba
+                        // Multicolored Abstract Artwork Alexander Grey 2018
+                        // Close-Up Photo Of Abstract Paint Anni Roenkae 2019
                         Image(
                             painter = painterResource(R.drawable.pexels_oandremoura_9083011),
                             contentDescription = null,
