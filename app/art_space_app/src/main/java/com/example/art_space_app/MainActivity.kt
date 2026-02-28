@@ -79,6 +79,8 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
                             .width(350.dp)
                     )
                     {
+                        // Blue Bird Perched on Wire Against Clear Sky Jagaba Denis
+                        // Close-up of Leaf with Water Droplets in Black and White Jonathan Borba
                         Image(
                             painter = painterResource(R.drawable.pexels_oandremoura_9083011),
                             contentDescription = null,
