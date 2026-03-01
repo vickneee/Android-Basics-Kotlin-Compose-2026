@@ -175,7 +175,7 @@ fun NumberGuessingGame() {
                 }
             }
             Spacer(modifier = Modifier.weight(1f))
-            Row() {
+            Row {
                 Text(text = stringResource(R.string.victoria_vavulina),
                     fontSize = 18.sp,
                     modifier = Modifier.padding(top = 16.dp),
