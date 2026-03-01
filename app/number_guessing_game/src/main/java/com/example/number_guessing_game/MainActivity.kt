@@ -6,8 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -173,14 +171,6 @@ fun NumberGuessingGame() {
                 ) {
                     Text(text = "Play Again")
                 }
-            }
-            Spacer(modifier = Modifier.weight(1f))
-            Row {
-                Text(text = stringResource(R.string.victoria_vavulina),
-                    fontSize = 18.sp,
-                    modifier = Modifier.padding(top = 16.dp),
-                    fontWeight = FontWeight.Bold
-                )
             }
         }
     }
