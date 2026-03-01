@@ -6,12 +6,15 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -118,17 +121,65 @@ fun NumberGuessingGame() {
                     }
                 )
             )
-            resultResId?.let { resId ->
-                val resultText = if (resId == R.string.number_guessed_correctly) {
-                    stringResource(resId, tryCount, secretNumber)
-                } else {
-                    stringResource(resId)
-                }
+            Button(
+                onClick = {
+                    val guessedNumber = numberInput.toIntOrNull()
+                    if (guessedNumber != null && !gameFinished) {
+                        tryCount++
+                        resultResId = when {
+                            guessedNumber == secretNumber -> {
+                                gameFinished = true
+                                R.string.number_guessed_correctly
+                            }
+                            guessedNumber < secretNumber -> R.string.too_low
+                            else -> R.string.too_high
+                        }
+                    }
+                },
+                modifier = Modifier
+                    .padding(top = 8.dp)
+                    .fillMaxWidth()
+            ) {
+                Text(text = "Guess")
+            }
 
+            resultResId?.let { resId ->
                 Text(
-                    text = resultText,
+                    text = if (resId == R.string.number_guessed_correctly)
+                        stringResource(resId, tryCount, secretNumber)
+
+                    else
+                        stringResource(resId),
                     fontSize = 18.sp,
                     modifier = Modifier.padding(top = 16.dp)
+                )
+            }
+
+            if( gameFinished ) {
+                Button(
+                    onClick = {
+                        secretNumber = (1..100).random()
+                        numberInput = ""
+                        resultResId = null
+                        gameFinished = false
+                        tryCount = 0
+
+                    },
+                    modifier = Modifier
+                        .padding(top = 8.dp)
+                        .fillMaxWidth()
+
+
+                ) {
+                    Text(text = "Play Again")
+                }
+            }
+            Spacer(modifier = Modifier.weight(1f))
+            Row() {
+                Text(text = stringResource(R.string.victoria_vavulina),
+                    fontSize = 18.sp,
+                    modifier = Modifier.padding(top = 16.dp),
+                    fontWeight = FontWeight.Bold
                 )
             }
         }
