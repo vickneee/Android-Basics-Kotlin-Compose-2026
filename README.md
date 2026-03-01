@@ -17,6 +17,6 @@
 </p>
 
 <p align="center">
-<img src="./res/Screenshot_20260301_031413.png" width="35%" alt="Android Mobile App Screen - Artwork Screen"/>
+<img src="./res/Screenshot_20260301_031413.png" width="80%" alt="Android Mobile App Screen - Artwork Screen"/>
 </p>
 
