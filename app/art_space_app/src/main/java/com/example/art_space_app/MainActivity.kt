@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -104,7 +105,8 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
             // Image Card
             Box(
                 modifier = modifier
-                    .weight(1f),
+                    .weight(1f)
+                    .widthIn(max = 350.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Surface(
@@ -133,7 +135,7 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
             Row(
                 modifier = modifier
                     .border(2.dp, Color.LightGray)
-                    .width(350.dp)
+                    .widthIn(max = 350.dp)
                     .background(
                         color = Color.LightGray
                     )
@@ -168,7 +170,7 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
             // Buttons
             Row(
                 modifier = modifier
-                    .padding(18.dp, 10.dp, 20.dp, 1.dp)
+                    .padding(18.dp, 14.dp, 18.dp, 6.dp)
                     .fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
@@ -182,7 +184,7 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
     }
                     }, modifier = Modifier.padding(8.dp)
                 ) {
-                    Text(text = "Previous", modifier = Modifier.padding(28.dp, 0.dp))
+                    Text(text = "Previous", modifier = Modifier.padding(24.dp, 0.dp))
                 }
 
                 Button(
@@ -195,7 +197,7 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
                     }, modifier = Modifier.padding(8.dp)
                 ) {
                     Text(text = "Next",
-                        modifier = Modifier.padding(28.dp, 0.dp))
+                        modifier = Modifier.padding(24.dp, 0.dp))
                 }
             }
         }
