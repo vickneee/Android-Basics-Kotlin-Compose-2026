@@ -16,7 +16,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
@@ -67,7 +67,7 @@ fun TipCalculator() {
 
     Box(
         modifier = Modifier
-            .padding(40.dp)
+            .padding(10.dp)
             .fillMaxSize(),
         contentAlignment = Alignment.Center,
         content = {
@@ -75,8 +75,8 @@ fun TipCalculator() {
                 modifier = Modifier
                     .statusBarsPadding()
                     .padding(horizontal = 40.dp)
-                    .verticalScroll(rememberScrollState())
-                    .width(300.dp),
+                    .widthIn(max = 300.dp)
+                    .verticalScroll(rememberScrollState()),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
