@@ -8,6 +8,8 @@
 
 ## Art Space App
 
+Photos: Pexels (https://www.pexels.com)
+
 <p align="center">
 <img src="./res/Screenshot_20260301_011636.png" width="35%" alt="Android Mobile App Screen - Artwork Screen"/> <img src="./res/Screenshot_20260301_011645.png" width="35%" alt="Android Mobile App Screen - Artwork Screen"/>
 </p>
