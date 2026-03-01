@@ -74,7 +74,7 @@ fun TipCalculator() {
             Column(
                 modifier = Modifier
                     .statusBarsPadding()
-                    .padding(horizontal = 40.dp)
+                    .padding(horizontal = 20.dp)
                     .widthIn(max = 300.dp)
                     .verticalScroll(rememberScrollState()),
                 horizontalAlignment = Alignment.CenterHorizontally,
