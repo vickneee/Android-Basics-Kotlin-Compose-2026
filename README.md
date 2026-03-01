@@ -25,6 +25,10 @@ Photos: [Pexels](https://www.pexels.com)
 ## Tip Calculator
 
 <p align="center">
+<img src="./res/Screenshot_20260301_063340.png" width="35%" alt="Android Mobile App Screen - Artwork Screen"/> <img src="./res/Screenshot_20260301_063348.png" width="35%" alt="Android Mobile App Screen - Artwork Screen"/>
+</p>
+
+<p align="center">
 <img src="./res/Screenshot_20260301_053527.png" width="80%" alt="Android Mobile App Screen - Artwork Screen"/>
 </p>
 
