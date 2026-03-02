@@ -124,6 +124,9 @@
       <SelectionState runConfigName="app.perjantai_13_2">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="app.monday_2_3">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
