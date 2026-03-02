@@ -106,7 +106,7 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
             Box(
                 modifier = modifier
                     .weight(1f)
-                    .widthIn(max = 350.dp),
+                    .widthIn(max = 330.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Surface(
@@ -116,8 +116,8 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
                     Row(
                         modifier = modifier
                             .background(Color.White)
-                            .height(500.dp)
-                            .width(350.dp)
+                            .height(480.dp)
+                            .width(330.dp)
                     )
                     {
                         Image(
@@ -135,7 +135,8 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
             Row(
                 modifier = modifier
                     .border(2.dp, Color.LightGray)
-                    .widthIn(max = 350.dp)
+                    .widthIn(min = 330.dp)
+                    .widthIn(max = 330.dp)
                     .background(
                         color = Color.LightGray
                     )
@@ -160,7 +161,8 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
                             }
                             append(" (${years[currentIndex]})")
                         },
-                        modifier = modifier,
+                        modifier = modifier
+                            .padding(top = 8.dp),
                         fontSize = 18.sp,
                         color = Color.Black
                     )
