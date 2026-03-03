@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -172,8 +171,9 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
             // Buttons
             Row(
                 modifier = modifier
-                    .padding(18.dp, 14.dp, 18.dp, 6.dp)
-                    .fillMaxWidth(),
+                    .padding(0.dp, 14.dp, 0.dp, 6.dp)
+                    .widthIn(min = 350.dp)
+                    .widthIn(max = 350.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
 
