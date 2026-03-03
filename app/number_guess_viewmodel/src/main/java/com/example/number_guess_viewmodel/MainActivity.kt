@@ -36,7 +36,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.number_guess_viewmodel.ui.theme.AndroidBasicsKotlinCompose2026Theme
-import com.example.number_guessing_game.ui.theme.AndroidBasicsKotlinCompose2026Theme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
