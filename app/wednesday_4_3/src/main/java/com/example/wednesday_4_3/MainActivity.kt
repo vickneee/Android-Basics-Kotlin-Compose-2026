@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.wednesday_4_3.ui.theme.AndroidBasicsKotlinCompose2026Theme
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -27,17 +28,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Scaffold(
-                modifier = Modifier.padding(
-                    start = 16.dp,
-                    top = 16.dp,
-                    end = 16.dp
-                )
-            ) {
-                Surface(
-                    modifier = Modifier.padding(it)
-                ) {
-                    PostScreen()
+            AndroidBasicsKotlinCompose2026Theme {
+
+                Scaffold() { paddingValues ->
+
+                    Surface(
+                        modifier = Modifier.padding(paddingValues)
+                    ) {
+                        PostScreen()
+                    }
                 }
             }
         }
