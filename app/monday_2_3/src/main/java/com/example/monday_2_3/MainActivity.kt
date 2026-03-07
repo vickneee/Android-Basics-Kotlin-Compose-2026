@@ -22,7 +22,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.monday_2_3.ui.theme.AndroidBasicsKotlinCompose2026Theme
@@ -41,7 +40,9 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
                     ShowAll(
+                        urlTextAddress = urlText,
                         urlText = urlText,
+                        urlImageAddress = urlImage,
                         urlImage = urlImage,
                         modifier = Modifier.padding(innerPadding)
                     )
@@ -53,7 +54,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ShowAll(
+    urlTextAddress: URL,
     urlText: URL,
+    urlImageAddress: URL,
     urlImage: URL,
     modifier: Modifier = Modifier
 ) {
@@ -61,9 +64,21 @@ fun ShowAll(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
+        PrintTextAddress(urlTextAddress)
         ShowText(urlText)
+        PrintImageAddress(urlImageAddress)
         ShowImage(urlImage)
     }
+}
+
+@Composable
+fun PrintTextAddress(url: URL) {
+    Text("URL: $url")
+}
+
+@Composable
+fun PrintImageAddress(url: URL) {
+    Text("URL: $url")
 }
 
 @Composable
@@ -78,8 +93,7 @@ fun ShowText(
         text = getText(urlText)
     }
     Text(text,
-        fontSize = 24.sp,
-        fontWeight = FontWeight.Bold,
+        fontSize = 18.sp,
         modifier = modifier
     )
 }
@@ -120,7 +134,6 @@ private suspend fun getImage(url: URL): ImageBitmap =
         stream.close()
         return@withContext bitmap.asImageBitmap()
     }
-
 
 @Preview(showBackground = true)
 @Composable
