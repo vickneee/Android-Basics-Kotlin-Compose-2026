@@ -19,7 +19,7 @@ Photos: [Pexels](https://www.pexels.com)
 </p>
 
 <p align="center">
-<img src="./res/Screenshot_20260301_043927.png" width="80%" alt="Android Mobile App Screen - Artwork Screen"/>
+<img src="./res/Screenshot_20260301_043927.png" width="74%" alt="Android Mobile App Screen - Artwork Screen"/>
 </p>
 
 ## Tip Calculator
@@ -29,9 +29,9 @@ Photos: [Pexels](https://www.pexels.com)
 </p>
 
 <p align="center">
-<img src="./res/Screenshot_20260301_053527.png" width="80%" alt="Android Mobile App Screen - Artwork Screen"/>
+<img src="./res/Screenshot_20260301_053527.png" width="74%" alt="Android Mobile App Screen - Artwork Screen"/>
 </p>
 
 <p align="center">
-<img src="./res/Screenshot_20260301_053545.png" width="80%" alt="Android Mobile App Screen - Artwork Screen"/>
+<img src="./res/Screenshot_20260301_053545.png" width="74%" alt="Android Mobile App Screen - Artwork Screen"/>
 </p>
